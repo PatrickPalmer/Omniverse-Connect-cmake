@@ -5,7 +5,7 @@
 # OmniverseConnectSample_DIR, where to find the headers
 #
 
-SET(OmniverseConnectSample_VERSION "103.1.0")
+SET(OmniverseConnectSample_VERSION "104.1.0")
 
 FIND_PATH(OmniverseConnectSample_DIR 
     NAMES "run_sample.bat"
