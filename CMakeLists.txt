@@ -83,9 +83,9 @@ if (COPY_CONNECT_LOCALLY)
         file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/deps")
     endif()
 
-    if (NOT EXISTS "${CMAKE_BINARY_DIR}/deps/nv_usd")
+    if (NOT EXISTS "${CMAKE_BINARY_DIR}/deps/usd")
         if (WIN32)
-            execute_process(COMMAND robocopy /S "${OmniverseConnectSample_DIR}/_build/target-deps/nv_usd" "${CMAKE_BINARY_DIR}/deps/nv_usd" /NFL /NDL /NJH /NJS /nc /ns /np)
+            execute_process(COMMAND robocopy /S "${OmniverseConnectSample_DIR}/_build/target-deps/usd" "${CMAKE_BINARY_DIR}/deps/usd" /NFL /NDL /NJH /NJS /nc /ns /np)
         endif()
     endif()
     if (NOT EXISTS "${CMAKE_BINARY_DIR}/deps/omni_client_library")
@@ -95,13 +95,13 @@ if (COPY_CONNECT_LOCALLY)
     endif()
 
     SET(OmniverseClient_ROOT ${CMAKE_BINARY_DIR}/deps/omni_client_library)
-    SET(NVidiaUSD_ROOT ${CMAKE_BINARY_DIR}/deps/nv_usd)
+    SET(NVidiaUSD_ROOT ${CMAKE_BINARY_DIR}/deps/usd)
 
 else()
 
     # use libraries in place
     SET(OmniverseClient_ROOT ${OmniverseConnectSample_DIR}/_build/target-deps/omni_client_library)
-    SET(NVidiaUSD_ROOT ${OmniverseConnectSample_DIR}/_build/target-deps/nv_usd)
+    SET(NVidiaUSD_ROOT ${OmniverseConnectSample_DIR}/_build/target-deps/usd)
 
 endif()
 
